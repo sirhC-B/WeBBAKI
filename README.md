@@ -13,21 +13,21 @@ TBA
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Spring Boot version: 2.5.5
+* 
+* Database: TBA
 	
 ## Team
 
-Project Owner:
-  Prof. Pilgermann
-Project Manager:
-  Niels
-IT-Security Manager:
-  Anatol
-Developer:
-  Chris(sirhC-B)
-  Chrisian
-  Jan
+#### Project Owner:
+  * Prof. Pilgermann
+#### Project Manager:
+  * Niels
+#### IT-Security Manager:
+  * Anatol
+#### Developer:
+  * Chris(sirhC-B)
+  * Chrisian
+  * Jan
 
 
