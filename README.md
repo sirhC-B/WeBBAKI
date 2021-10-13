@@ -22,7 +22,7 @@ Project is created with:
 #### Project Owner:
   * Prof. Pilgermann
 #### Project Manager:
-  * Niels
+  * Niels(pridzuhn)
 #### IT-Security Manager:
   * Anatol
 #### Developer:
