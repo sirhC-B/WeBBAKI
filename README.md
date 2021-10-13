@@ -27,7 +27,7 @@ Project is created with:
   * Anatol
 #### Developer:
   * Chris(sirhC-B)
-  * Chrisian
+  * Christian(schrammbox)
   * Jan
 
 
