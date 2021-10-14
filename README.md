@@ -28,6 +28,6 @@ Project is created with:
 #### Developer:
   * Chris(sirhC-B)
   * Christian(schrammbox)
-  * Jan
+  * Jan(LiterallyJan)
 
 
