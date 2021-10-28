@@ -40,7 +40,7 @@ body {
 input[type=text] {
     background-color: #ffffff;
     border: none;
-    border-bottom: 2px solid #0DB8DE;
+    border-bottom: 2px solid rgba(13, 184, 222, 0.5);
     border-top: 0px;
     border-radius: 0px;
     font-weight: bold;
@@ -53,7 +53,7 @@ input[type=text] {
 input[type=password] {
     background-color: #ffffff;
     border: none;
-    border-bottom: 2px solid #0DB8DE;
+    border-bottom: 2px solid rgba(13, 184, 222, 0.5);
     border-top: 0px;
     border-radius: 0px;
     font-weight: bold;
@@ -88,7 +88,7 @@ label {
 }
 
 .form-control-label {
-    font-size: 12px;
+    font-size: 13.5px;
     color: #686869FF;
     font-weight: bold;
     letter-spacing: 1px;
