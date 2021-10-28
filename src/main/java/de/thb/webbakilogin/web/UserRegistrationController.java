@@ -1,7 +1,7 @@
 package de.thb.webbakilogin.web;
 
 import de.thb.webbakilogin.service.UserService;
-import de.thb.webbakilogin.web.dto.UserRegistrationDto;
+import de.thb.webbakilogin.web.dao.UserRegistrationDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,8 +12,8 @@ public class UserRegistrationController {
     private UserService userService;
 
     @ModelAttribute("user")
-    public UserRegistrationDto userRegistrationDto(){
-        return new UserRegistrationDto();
+    public UserRegistrationDao userRegistrationDto(){
+        return new UserRegistrationDao();
     }
 
     @GetMapping
@@ -22,7 +22,7 @@ public class UserRegistrationController {
     }
 
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user")UserRegistrationDto registrationDto){
+    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDto){
         userService.save(registrationDto);
         return "redirect:registration?success";
     }

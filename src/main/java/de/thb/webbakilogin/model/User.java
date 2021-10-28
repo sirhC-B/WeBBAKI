@@ -11,6 +11,7 @@ import java.util.List;
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
+    //Id Erstellung
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -35,6 +36,15 @@ public class User {
     )
     private List<Role> roles;
 
+
+    //User Login Konstruktor
+    public User(String email, String password, List<Role> roles){
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+    }
+
+    //User Registrierungskonstruktor
     public User(String firstName, String lastName, String email, String password, List<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -43,6 +53,7 @@ public class User {
         this.roles = roles;
     }
 
+    //GETTER & SETTER
     public long getId() {
         return id;
     }

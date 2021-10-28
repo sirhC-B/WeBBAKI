@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.web.dto;
+package de.thb.webbakilogin.web.dao;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserRegistrationDto {
+public class UserRegistrationDao {
     private String firstName;
     private String lastName;
     private String email;
