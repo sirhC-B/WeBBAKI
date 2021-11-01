@@ -37,14 +37,26 @@ public class User {
     private List<Role> roles;
 
 
-    //User Login Konstruktor
+    /***
+     * Constructor for User Login, uses inputs from Login
+     * @param email
+     * @param password
+     * @param roles
+     */
     public User(String email, String password, List<Role> roles){
         this.email = email;
         this.password = password;
         this.roles = roles;
     }
 
-    //User Registrierungskonstruktor
+    /***
+     * Constructor for User Registration, uses inputs from Registration
+     * @param firstName
+     * @param lastName
+     * @param email
+     * @param password
+     * @param roles
+     */
     public User(String firstName, String lastName, String email, String password, List<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;

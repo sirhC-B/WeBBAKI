@@ -16,15 +16,24 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepository;
 
+    /***
+     * Constructor of the UserServiceImpl class
+     * @param userRepository TODO
+     */
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
+    /***
+     * 
+     * @param registrationDao
+     * @return
+     */
     @Override
-    public User save(UserRegistrationDao registrationDto) {
-        User user = new User(registrationDto.getFirstName(),
-                registrationDto.getLastName(), registrationDto.getEmail(),
-                registrationDto.getPassword(), List.of(new Role("ROLE_USER")));
+    public User save(UserRegistrationDao registrationDao) {
+        User user = new User(registrationDao.getFirstName(),
+                registrationDao.getLastName(), registrationDao.getEmail(),
+                registrationDao.getPassword(), List.of(new Role("ROLE_USER")));
 
         return userRepository.save(user);
     }

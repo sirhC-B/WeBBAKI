@@ -12,7 +12,7 @@ public class UserRegistrationController {
     private UserService userService;
 
     @ModelAttribute("user")
-    public UserRegistrationDao userRegistrationDto(){
+    public UserRegistrationDao userRegistrationDao(){
         return new UserRegistrationDao();
     }
 
