@@ -25,9 +25,9 @@ public class UserServiceImpl implements UserService{
     }
 
     /***
-     * 
-     * @param registrationDao
-     * @return
+     * Creates an Instance of User with the parameters of registrationDao and persists it
+     * @param registrationDao Instance, which holds all Registration inputs
+     * @return Persist this user instance
      */
     @Override
     public User save(UserRegistrationDao registrationDao) {
@@ -38,6 +38,11 @@ public class UserServiceImpl implements UserService{
         return userRepository.save(user);
     }
 
+    /***
+     * Creates an Instance of User with the parameters of userLoginDao and persists it
+     * @param userLoginDao Instance, which holds all Login inputs
+     * @return Persist this user instance
+     */
     @Override
     public User save(UserLoginDao userLoginDao){
         User user = new User(userLoginDao.getEmail(), userLoginDao.getPassword(), List.of(new Role("ROLE_USER")));
