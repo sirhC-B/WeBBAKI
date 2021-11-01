@@ -20,6 +20,10 @@ public class UserRegistrationController {
         return new UserRegistrationDao();
     }
 
+    /***
+     * Returns the registration.html on HTTP Requests
+     * @return returns registration.html
+     */
     @GetMapping
     public String showRegistrationForm(){
         return "registration";

@@ -23,6 +23,10 @@ public class UserLoginController {
         return new UserLoginDao();
     }
 
+    /***
+     * Returns the login.html on HTTP Requests
+     * @return returns login.html
+     */
     @GetMapping
     public String showLoginForm(){
         return "login";
