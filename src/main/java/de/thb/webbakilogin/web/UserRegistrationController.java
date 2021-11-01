@@ -11,6 +11,10 @@ public class UserRegistrationController {
 
     private UserService userService;
 
+    /***
+     * TODO
+     * @return
+     */
     @ModelAttribute("user")
     public UserRegistrationDao userRegistrationDao(){
         return new UserRegistrationDao();
@@ -21,9 +25,15 @@ public class UserRegistrationController {
         return "registration";
     }
 
+    /***
+     * Calls method for handling persistence of UserRegistrationDao instances, with registrationDao
+     * Additionally redirects webpage user
+     * @param registrationDao Instance, which holds all Registration inputs
+     * @return redirects to the webpage for a successful registration
+     */
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDto){
-        userService.save(registrationDto);
+    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDao){
+        userService.save(registrationDao);
         return "redirect:registration?success";
     }
 
