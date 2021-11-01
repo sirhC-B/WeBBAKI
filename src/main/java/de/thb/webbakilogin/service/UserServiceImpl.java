@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService{
 
     /***
      * Constructor of the UserServiceImpl class
-     * @param userRepository TODO
+     * @param userRepository
      */
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
