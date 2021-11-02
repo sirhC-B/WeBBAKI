@@ -14,16 +14,30 @@ public class UserLoginController {
 
     private UserService userService;
 
+    /***
+     * TODO
+     * @return
+     */
     @ModelAttribute("user")
-    public UserLoginDao userLoginDto(){
+    public UserLoginDao userLoginDao(){
         return new UserLoginDao();
     }
 
+    /***
+     * Returns the login.html on HTTP Requests
+     * @return returns login.html
+     */
     @GetMapping
     public String showLoginForm(){
         return "login";
     }
 
+    /***
+     * Calls method for handling persistence of UserLoginDao instances, with userLoginDao
+     * Additionally redirects webpage user
+     * @param userLoginDao Instance, which holds all Login inputs
+     * @return redirects to the webpage for a successful login
+     */
     @PostMapping
     public String loginUser(@ModelAttribute("user") UserLoginDao userLoginDao){
         userService.save(userLoginDao);
