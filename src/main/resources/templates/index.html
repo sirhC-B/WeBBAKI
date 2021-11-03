@@ -64,7 +64,7 @@ END MENU -->
                                 <form th:action="@{/login}" method="post" th:object="${logUser}">
                                     <div class="form-group">
                                         <label class="form-control-label">Email</label>
-                                            <input type="text" class="form-control" th:field="*{email}">
+                                        <input type="text" class="form-control" th:field="*{email}">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-control-label">Passwort</label>
@@ -79,7 +79,9 @@ END MENU -->
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                            <button type="submit" class="btn btn-outline-primary btn-success">Login</button>
+                            <a th:href="@{/start}">
+                                <button type="submit" class="btn btn-outline-primary btn-success">Login</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -127,6 +129,11 @@ END MENU -->
                                             <option value="health">Gesundheit</option>
                                             <option value="technology">IT und TK</option>
                                             <option value="transport">Transport und Verkehr</option>
+                                            <option value="water">Wasser</option>
+                                            <option value="nutrition">Ernährung</option>
+                                            <option value="finance">Finanz- und Versicherungswesen</option>
+                                            <option value="garbage">Siedlungsabfallentsorgung</option>
+                                            <option value="maintenance">Staat und Verwaltung</option>
                                             <option value="media">Medien und Kultur</option>
 
                                         </select>
@@ -141,18 +148,41 @@ END MENU -->
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                            <button type="submit" class="btn btn-outline-primary btn-success">Registrieren</button>
+                            <button type="submit" class="btn btn-outline-primary btn-success modal-button"
+                                    data-toggle="modal" data-target="#mySuccessModal">
+                                Registrieren
+                            </button>
                         </div>
+
+                        <!-- REGISTRATION SUCCESS ALERT -->
+                        <div class="modal fade" id="mySuccessModal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="card">
+                                    <div class="card-img"><img class="img-fluid" src="https://i.imgur.com/WiymzOC.jpeg">
+                                    </div>
+                                    <div class="card-title">
+                                        <p>Die Registrierung war erfolgreich!</p>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>Super! Wir werden deine Registrierung umgehend prüfen und dir einen
+                                            Bestätigunslink per Email schicken!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
+
         <!-- REGISTER PAGE CONTENT END -->
 
         <div class="row justify-content-center row-headline row-btn">
             <div class="col-lg">
-                    <h1 class="mainHeadline">Trendanalyse der Bedrohungslage für kritische Infrastrukturen (KRITIS) in Deutschland</h1>
+                <h1 class="mainHeadline">Trendanalyse der Bedrohungslage für kritische Infrastrukturen (KRITIS) in
+                    Deutschland</h1>
                 <!-- BUTTONS -->
                 <div class="d-flex justify-content-center">
 
