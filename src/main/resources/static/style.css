@@ -6,25 +6,33 @@ body {
     height: 80px;
 }
 
-.container{
-    max-width: 100%!important;
+.collapse {
+    z-index: 1;
+    position: relative;
+    background-color: rgb(52, 58, 64);
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 100% !important;
     position: relative;
     border: 1px solid black;
 }
 
-.row-btn{
+.row-btn {
     margin: 0;
     position: absolute;
     top: 60%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%)!important;
-    transform: translate(-50%, -50%)!important;
+    -ms-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
 }
 
 .background {
-    background-image: url("images/netzwerke.jpg")!important;
+    background-image: url("images/netzwerke.jpg") !important;
     background-size: cover;
-    height: 700px!important;
+    height: 700px !important;
 }
 
 .login-box {
@@ -36,24 +44,24 @@ body {
     border-radius: 8px;
 }
 
-.text-center{
+.text-center {
     padding: 10px;
 }
 
 @media (min-width: 720px) {
-    .row-headline{
+    .row-headline {
         width: 300px;
     }
 }
 
 @media (min-width: 900px) {
-    .row-headline{
+    .row-headline {
         width: 800px;
     }
 }
 
 
-.mainHeadline{
+.mainHeadline {
     color: #ffffff;
     text-align: center;
 }
