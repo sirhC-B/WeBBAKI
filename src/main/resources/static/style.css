@@ -6,12 +6,11 @@ body {
     height: 80px;
 }
 
-.collapse {
+.container-fluid {
     z-index: 1;
     position: relative;
     background-color: rgb(52, 58, 64);
     padding: 10px;
-    border: 1px solid black;
 }
 
 .container {
