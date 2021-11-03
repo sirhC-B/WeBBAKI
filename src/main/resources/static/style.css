@@ -37,7 +37,9 @@ body {
 .body-startpage{
     background-image: url("images/Schalenmodell.jpg") !important;
     background-size: cover;
-    height: 900px !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-repeat: no-repeat;
 }
 
 .login-box {
@@ -233,7 +235,7 @@ Registraion Success Button
 
 .card-img {
     padding: 20px 0;
-    width: 40%
+    width: 65%!important;
 }
 
 .card-img img {
@@ -247,13 +249,14 @@ Registraion Success Button
 .card-title p {
     color: rgb(29, 226, 226);
     font-weight: 900;
-    font-size: 30px;
-    margin-bottom: unset
+    font-size: 24px;
+    margin-bottom: unset;
+    text-align: center;
 }
 
 .card-text p {
     color: grey;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     padding: 3vh 0;
     font-weight: lighter
