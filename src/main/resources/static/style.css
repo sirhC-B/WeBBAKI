@@ -2,18 +2,29 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.col-6 {
-    max-width: 75% !important;
-}
-
 .navbar {
     height: 80px;
 }
 
+.container{
+    max-width: 100%!important;
+    position: relative;
+    border: 1px solid black;
+}
+
+.row-btn{
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%)!important;
+    transform: translate(-50%, -50%)!important;
+}
+
 .background {
-    background-image: url("images/netzwerke.jpg");
+    background-image: url("images/netzwerke.jpg")!important;
     background-size: cover;
-    height: 700px;
+    height: 700px!important;
 }
 
 .login-box {
@@ -23,6 +34,28 @@ body {
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 8px;
+}
+
+.text-center{
+    padding: 10px;
+}
+
+@media (min-width: 720px) {
+    .row-headline{
+        width: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+    .row-headline{
+        width: 800px;
+    }
+}
+
+
+.mainHeadline{
+    color: #ffffff;
+    text-align: center;
 }
 
 .login-key {
