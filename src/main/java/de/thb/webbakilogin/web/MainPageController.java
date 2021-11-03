@@ -17,7 +17,7 @@ public class MainPageController{
     Giving the Login Parameters for the Login Form in index.html
      */
 
-    @ModelAttribute("user")
+    @ModelAttribute("logUser")
     public UserLoginDao userLoginDto(){
         return new UserLoginDao();
     }
@@ -25,7 +25,7 @@ public class MainPageController{
     /*
     Giving the Register Parameters for the Register Form in index.html
      */
-    @ModelAttribute("user")
+    @ModelAttribute("regUser")
     public UserRegistrationDao userRegistrationDao(){
         return new UserRegistrationDao();
     }

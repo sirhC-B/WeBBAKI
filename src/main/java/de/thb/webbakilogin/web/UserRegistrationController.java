@@ -15,7 +15,7 @@ public class UserRegistrationController {
      * TODO
      * @return
      */
-    @ModelAttribute("user")
+    @ModelAttribute("regUser")
     public UserRegistrationDao userRegistrationDao(){
         return new UserRegistrationDao();
     }
@@ -36,7 +36,7 @@ public class UserRegistrationController {
      * @return redirects to the webpage for a successful registration
      */
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDao){
+    public String registerUserAccount(@ModelAttribute("regUser") UserRegistrationDao registrationDao){
         userService.save(registrationDao);
         return "redirect:registration?success";
     }

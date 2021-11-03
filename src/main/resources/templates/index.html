@@ -59,7 +59,7 @@
 
                             <!-- LOGIN FORM BEGIN-->
                             <div class="col-lg-12 login-form">
-                                <form th:action="@{/login}" method="post" th:object="${user}">
+                                <form th:action="@{/login}" method="post" th:object="${logUser}">
                                     <div class="form-group">
                                         <label class="form-control-label">Email</label>
                                         <label>
@@ -104,7 +104,7 @@
                             <!-- REGISTER FORM BEGIN-->
                             <div class="col-lg-12 login-form">
                                 <div class="col-lg-12 login-form">
-                                    <form th:action="@{/registration}" method="post" th:object="${user}">
+                                    <form th:action="@{/registration}" method="post" th:object="${regUser}">
                                         <div class="form-group">
                                             <label class="form-control-label">Vorname</label>
                                             <input type="text" class="form-control" th:field="*{firstName}">
