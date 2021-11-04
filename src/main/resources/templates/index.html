@@ -106,7 +106,7 @@ END MENU -->
                             <!-- REGISTER FORM BEGIN-->
                             <div class="col-lg-12 login-form">
                                 <div class="col-lg-12 login-form">
-                                    <form th:action="@{/registration}" method="post" th:object="${regUser}">
+                                    <form th:action="@{/registrationSuccsess}" method="post" th:object="${regUser}">
                                         <div class="form-group">
                                             <label class="form-control-label">Vorname</label>
                                             <input type="text" class="form-control" th:field="*{firstName}">
@@ -137,7 +137,13 @@ END MENU -->
                                             <option value="media">Medien und Kultur</option>
 
                                         </select>
-
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                                            <button type="submit" class="btn btn-outline-primary btn-success modal-button"
+                                                    data-toggle="modal" data-target="#mySuccessModal">
+                                                Registrieren
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -146,13 +152,7 @@ END MENU -->
                         </div>
                         <!-- Modal PopUp END -->
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                            <button type="submit" class="btn btn-outline-primary btn-success modal-button"
-                                    data-toggle="modal" data-target="#mySuccessModal">
-                                Registrieren
-                            </button>
-                        </div>
+
 
                         <!-- REGISTRATION SUCCESS ALERT -->
                         <div class="modal fade" id="mySuccessModal" role="dialog">
