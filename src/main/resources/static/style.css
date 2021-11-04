@@ -22,7 +22,7 @@ body {
 .row-btn {
     margin: 0;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%) !important;
     transform: translate(-50%, -50%) !important;
@@ -31,7 +31,15 @@ body {
 .background {
     background-image: url("images/netzwerke.jpg") !important;
     background-size: cover;
-    height: 900px !important;
+    height: 100% !important;
+}
+
+.body-startpage{
+    background-image: url("images/Schalenmodell.jpg") !important;
+    background-size: cover;
+    height: 100% !important;
+    width: 100% !important;
+    background-repeat: no-repeat;
 }
 
 .login-box {
@@ -194,4 +202,62 @@ label {
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
+}
+
+/*
+Registraion Success Button
+ */
+
+.modal-button {
+    background-color: rgb(29, 226, 226);
+    border-color: rgb(29, 226, 226);
+    border-radius: 6px;
+    color: white;
+    font-size: 17px;
+    padding-right: 76px;
+    padding-left: 76px
+}
+
+.card {
+    border-radius: 3vh;
+    margin: auto;
+    max-width: 380px;
+    padding: 7vh 6vh;
+    align-items: center;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+@media(max-width:767px) {
+    .card {
+        width: 90vw
+    }
+}
+
+.card-img {
+    padding: 20px 0;
+    width: 65%!important;
+}
+
+.card-img img {
+    opacity: 0.7
+}
+
+.card-title {
+    margin-bottom: unset
+}
+
+.card-title p {
+    color: rgb(29, 226, 226);
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: unset;
+    text-align: center;
+}
+
+.card-text p {
+    color: grey;
+    font-size: 20px;
+    text-align: center;
+    padding: 3vh 0;
+    font-weight: lighter
 }
