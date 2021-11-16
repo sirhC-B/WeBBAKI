@@ -10,6 +10,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
+List.of(new Role("ROLE_USER"))
+ */
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -33,7 +37,7 @@ public class UserServiceImpl implements UserService{
     public User save(UserRegistrationDao registrationDao) {
         User user = new User(registrationDao.getFirstName(),
                 registrationDao.getLastName(), registrationDao.getEmail(),
-                registrationDao.getPassword(), List.of(new Role("ROLE_USER")));
+                registrationDao.getPassword(), registrationDao.getRole());
 
         return userRepository.save(user);
     }
@@ -45,7 +49,7 @@ public class UserServiceImpl implements UserService{
      */
     @Override
     public User save(UserLoginDao userLoginDao){
-        User user = new User(userLoginDao.getEmail(), userLoginDao.getPassword(), List.of(new Role("ROLE_USER")));
+        User user = new User(userLoginDao.getEmail(), userLoginDao.getPassword(), userLoginDao.getRole());
 
         return userRepository.save(user);
     }

@@ -1,10 +1,8 @@
 package de.thb.webbakilogin.model;
 
 import lombok.*;
-import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
-import java.util.List;
 
 @NoArgsConstructor
 @Entity
@@ -24,7 +22,7 @@ public class User {
     private String email;
     private String password;
 
-
+    /*
     //Erstellung der Tabellen in DB
     @ManyToMany (fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
@@ -34,19 +32,23 @@ public class User {
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id")
     )
-    private List<Role> roles;
+    */
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
 
     /***
      * Constructor for User Login, uses inputs from Login
      * @param email
      * @param password
-     * @param roles
+     * @param role
      */
-    public User(String email, String password, List<Role> roles){
+    public User(String email, String password, Role role){
         this.email = email;
         this.password = password;
-        this.roles = roles;
+        this.role = role;
     }
 
     /***
@@ -55,14 +57,14 @@ public class User {
      * @param lastName
      * @param email
      * @param password
-     * @param roles
+     * @param role
      */
-    public User(String firstName, String lastName, String email, String password, List<Role> roles) {
+    public User(String firstName, String lastName, String email, String password, Role role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.roles = roles;
+        this.role = role;
     }
 
     //GETTER & SETTER
@@ -106,11 +108,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

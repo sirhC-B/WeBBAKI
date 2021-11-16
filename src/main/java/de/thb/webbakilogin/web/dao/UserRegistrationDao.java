@@ -1,5 +1,6 @@
 package de.thb.webbakilogin.web.dao;
 
+import de.thb.webbakilogin.model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,6 @@ public class UserRegistrationDao {
     private String lastName;
     private String email;
     private String password;
-
+    private Role role;
 
 }
