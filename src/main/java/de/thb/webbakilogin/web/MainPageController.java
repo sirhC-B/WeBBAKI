@@ -24,8 +24,8 @@ public class MainPageController{
      */
 
     @ModelAttribute("logUser")
-    public String viewUserList(){
-        return "login_success";
+    public UserLoginDao userLoginDto(){
+        return new UserLoginDao();
     }
 
     /*
@@ -42,14 +42,13 @@ public class MainPageController{
         return "index";
     }
 
-    @RequestMapping("/registrationSuccsess")
+    @RequestMapping("/registration_success")
     public String registSuc(User user){
         repo.save(user);
         return "registration_success";
 
     }
 
-    @GetMapping("/login_succsess")
 
     /***
      * TODO
