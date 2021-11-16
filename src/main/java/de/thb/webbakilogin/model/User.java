@@ -34,6 +34,7 @@ public class User {
     )
     */
 
+    //TODO Das Verstehen
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;

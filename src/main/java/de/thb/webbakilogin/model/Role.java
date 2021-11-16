@@ -3,6 +3,7 @@ package de.thb.webbakilogin.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -15,6 +16,9 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+
+    @OneToMany (targetEntity=User.class, mappedBy="role")
+    private List<User> users;
 
     /***
      * Constructor of the Role Class
