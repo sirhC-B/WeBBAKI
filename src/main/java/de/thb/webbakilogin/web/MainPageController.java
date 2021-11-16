@@ -24,8 +24,8 @@ public class MainPageController{
      */
 
     @ModelAttribute("logUser")
-    public UserLoginDao userLoginDto(){
-        return new UserLoginDao();
+    public String viewUserList(){
+        return "login_success";
     }
 
     /*
@@ -34,7 +34,6 @@ public class MainPageController{
     @ModelAttribute("regUser")
     public UserRegistrationDao userRegistrationDao(Model model){
         model.addAttribute("regUser",new User());
-        System.out.println("UNO!");
         return new UserRegistrationDao();
     }
 
@@ -49,6 +48,8 @@ public class MainPageController{
         return "registration_success";
 
     }
+
+    @GetMapping("/login_succsess")
 
     /***
      * TODO
