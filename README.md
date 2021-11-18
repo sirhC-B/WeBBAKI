@@ -14,15 +14,12 @@ TBA
 ## Technologies
 Project is created with:
 * Spring Boot version: 2.5.5
-* 
 * Database: TBA
 	
 ## Team
 
 #### Project Owner:
   * Prof. Pilgermann
-#### Project Manager:
-  * Niels(pridzuhn)
 #### IT-Security Manager:
   * Anatol
 #### Developer:
