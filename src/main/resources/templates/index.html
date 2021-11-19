@@ -44,6 +44,12 @@ END MENU -->
 <!-- Container -->
 <div class="container background">
     <div class="row">
+
+        <!--success message-->
+        <div th:if="${param.success}">
+            <div class="alert alert-info">Wir werden Ihre Registrierung umgehend prüfen und Ihnen einen
+                Bestätigunslink per Email schicken!</div>
+        </div>
         <div class="col">
             <!-- SIGN IN PAGE CONTENT-->
             <!-- Modal -->
@@ -61,7 +67,7 @@ END MENU -->
 
                             <!-- LOGIN FORM BEGIN-->
                             <div class="col-lg-12 login-form">
-                                <form th:action="@{/login_success}" method="post" th:object="${logUser}">
+                                <form th:action="@{/login}" method="post" th:object="${logUser}">
                                     <div class="form-group">
                                         <label class="form-control-label">Email</label>
                                         <input type="text" class="form-control" th:field="*{email}" required
@@ -107,7 +113,8 @@ END MENU -->
                             <!-- REGISTER FORM BEGIN-->
                             <div class="col-lg-12 login-form">
                                 <div class="col-lg-12 login-form">
-                                    <form th:action="@{/registration_success}" method="post" th:object="${regUser}">
+
+                                    <form th:action="@{/index}" method="post" th:object="${user}">
                                         <div class="form-group">
                                             <label class="form-control-label">Vorname</label>
                                             <input type="text" class="form-control" th:field="*{firstName}" required
@@ -128,6 +135,8 @@ END MENU -->
                                             <input type="email" class="form-control" th:field="*{email}" required
                                                    minlength="6" maxlength="42">
                                         </div>
+
+                                        <!--TODO th:field="*{sector} -->
                                         <select class="form-select" aria-label="Default select example">
                                             <option selected>Auswahl Sektor kritischer Infrastrukturen</option>
                                             <option value="energy">Energie</option>
@@ -144,11 +153,14 @@ END MENU -->
                                         </select>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                                            <button type="submit" class="btn btn-outline-primary btn-success modal-button"
-                                                    data-toggle="modal" data-target="#mySuccessModal">
+                                            <button type="submit" class="btn btn-outline-primary btn-success ">
                                                 Registrieren
+
+
                                             </button>
                                         </div>
+
+
                                     </form>
                                 </div>
                             </div>
@@ -158,8 +170,8 @@ END MENU -->
                         <!-- Modal PopUp END -->
 
 
-
                         <!-- REGISTRATION SUCCESS ALERT -->
+
                         <div class="modal fade" id="mySuccessModal" role="dialog">
                             <div class="modal-dialog">
                                 <div class="card">
@@ -175,6 +187,7 @@ END MENU -->
                                 </div>
                             </div>
                         </div>
+
 
                     </div>
                 </div>
