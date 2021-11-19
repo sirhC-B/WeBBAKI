@@ -1,8 +1,6 @@
 package de.thb.webbakilogin;
 
-import de.thb.webbakilogin.model.User;
-import de.thb.webbakilogin.model.repository.UserRepository;
-import org.junit.jupiter.api.Test;
+import de.thb.webbakilogin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -21,26 +19,5 @@ public class UserRepositoryTest {
     @Autowired
     private TestEntityManager entityManager;
 
-    @Test
-    public void testCreateUser(){
-        User user = new User();
-        user.setEmail("mustermann@testmail.com");
-        user.setPassword("password");
-        user.setFirstName("Max");
-        user.setLastName("Mustermann");
 
-        User savedUser = repo.save(user);
-
-        User existUser = entityManager.find(User.class, savedUser.getId());
-
-        assertThat(existUser.getEmail()).isEqualTo(user.getEmail());
-    }
-
-    @Test
-    public void testFindUserByEmail(){
-        String email = "mustermann@testmail.com";
-        User user = repo.findByEmail(email);
-
-        assertThat(user).isNotNull();
-    }
 }

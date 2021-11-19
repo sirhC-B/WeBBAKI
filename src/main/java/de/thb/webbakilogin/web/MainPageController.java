@@ -1,7 +1,7 @@
 package de.thb.webbakilogin.web;
 
 import de.thb.webbakilogin.model.User;
-import de.thb.webbakilogin.model.repository.UserRepository;
+import de.thb.webbakilogin.repository.UserRepository;
 import de.thb.webbakilogin.service.UserService;
 import de.thb.webbakilogin.web.dao.UserLoginDao;
 import de.thb.webbakilogin.web.dao.UserRegistrationDao;
@@ -18,22 +18,25 @@ import org.springframework.ui.Model;
 public class MainPageController{
 
     @Autowired
-    private UserRepository repo;
+    private UserService userService;
     /*
     Giving the Login Parameters for the Login Form in index.html
      */
 
+
+
     @ModelAttribute("logUser")
-    public UserLoginDao userLoginDto(){
+    public UserLoginDao userLoginDto(Model model){
+        model.addAttribute("logUser", new UserLoginDao());
         return new UserLoginDao();
     }
 
     /*
     Giving the Register Parameters for the Register Form in index.html
      */
-    @ModelAttribute("regUser")
-    public UserRegistrationDao userRegistrationDao(Model model){
-        model.addAttribute("regUser",new User());
+
+    @ModelAttribute("user")
+    public UserRegistrationDao userRegistrationDao(){
         return new UserRegistrationDao();
     }
 
@@ -42,17 +45,16 @@ public class MainPageController{
         return "index";
     }
 
-    @RequestMapping("/registration_success")
-    public String registSuc(User user){
-        repo.save(user);
-        return "registration_success";
-
+    @GetMapping("/login")
+    public String login(){
+        return "login";
     }
 
 
-    /***
-     * TODO
-     * @ return
-     */
+    @RequestMapping("index")
+    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDao){
+        userService.save(registrationDao);
+        return "redirect:/?success";
+    }
 
 }

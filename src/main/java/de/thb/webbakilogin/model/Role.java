@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -16,11 +15,15 @@ public class Role {
     private long id;
     private String name;
 
-    /***
+    public Role(){
+
+    }
+    public Role(String name) {
+        this.name = name;
+    }
+/***
      * Constructor of the Role Class
      * @param name the name of the role
      */
-    public Role (String name){
-        this.name = name;
-    }
+
 }
