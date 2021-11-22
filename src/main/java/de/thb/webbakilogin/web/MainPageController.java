@@ -1,7 +1,5 @@
 package de.thb.webbakilogin.web;
 
-import de.thb.webbakilogin.model.User;
-import de.thb.webbakilogin.repository.UserRepository;
 import de.thb.webbakilogin.service.UserService;
 import de.thb.webbakilogin.web.dao.UserLoginDao;
 import de.thb.webbakilogin.web.dao.UserRegistrationDao;
@@ -9,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
@@ -51,7 +48,7 @@ public class MainPageController{
     }
 
 
-    @RequestMapping("index")
+    @RequestMapping("/")
     public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDao){
         userService.save(registrationDao);
         return "redirect:/?success";
