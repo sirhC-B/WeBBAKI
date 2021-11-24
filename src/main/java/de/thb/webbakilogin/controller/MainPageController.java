@@ -1,8 +1,8 @@
-package de.thb.webbakilogin.web;
+package de.thb.webbakilogin.controller;
 
 import de.thb.webbakilogin.service.UserService;
-import de.thb.webbakilogin.web.dao.UserLoginDao;
-import de.thb.webbakilogin.web.dao.UserRegistrationDao;
+import de.thb.webbakilogin.controller.dao.UserLoginDao;
+import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +20,11 @@ public class MainPageController{
     Giving the Login Parameters for the Login Form in index.html
      */
 
+
+    /**
+     * TODO
+     * @Chris Bösner /login korrigieren als Index
+     */
 
 
     @ModelAttribute("logUser")

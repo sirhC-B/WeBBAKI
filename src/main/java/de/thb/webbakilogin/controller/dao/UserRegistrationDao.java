@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.web.dao;
+package de.thb.webbakilogin.controller.dao;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +14,7 @@ public class UserRegistrationDao {
     private String lastName;
     private String email;
     private String password;
+    private String sector;
 
 
 }

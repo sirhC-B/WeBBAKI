@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.web.dao;
+package de.thb.webbakilogin.controller.dao;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

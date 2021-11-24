@@ -1,16 +1,15 @@
 package de.thb.webbakilogin.model;
 
 import lombok.*;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.ManyToAny;
-
 import javax.persistence.*;
-
 import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
 public class User {
 
     //Id Erstellung
@@ -30,7 +29,9 @@ public class User {
     @Column(nullable = false, length = 64)
     private String password;
 
-
+    /**
+     * @JoinTable benötigt für private Collection roles
+     */
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name="user_roles",
@@ -39,81 +40,30 @@ public class User {
             inverseJoinColumns = @JoinColumn(
                     name = "role_id",referencedColumnName = "id")
     )
+
     private Collection<Role> roles;
 
-    public User(){
 
-    }
-    public User(String email, String firstName, String lastName, String password, Collection<Role> roles) {
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Collection<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Collection<Role> roles) {
-        this.roles = roles;
-    }
-
-    /***
-     * Constructor for User Login, uses inputs from Login
+    /**
+     * Ersatz für @AllArgsConstructor, da sonst Probleme in der UserServiceImpl .save Methode
      * @param email
+     * @param firstName
+     * @param lastName
      * @param password
      * @param roles
      */
+    public User(String email, String firstName, String lastName, String password, Collection<Role> roles){
+        setEmail(email);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setPassword(password);
+        setRoles(roles);
+    }
 
-    /***
-     * Constructor for User Registration, uses inputs from Registration
-     * @param firstName
-     * @param lastName
-     * @param email
-     * @param password
-     * @param roles
+
+    /**
+     * TODO
+     * Sektor noch benötigt
+     * Siehe UserRegistrationDAO
      */
 }
