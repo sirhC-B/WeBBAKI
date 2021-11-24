@@ -48,10 +48,10 @@ public class MainPageController{
     }
 
 
-    @RequestMapping("/")
+    @RequestMapping("/register")
     public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDao){
         userService.save(registrationDao);
-        return "redirect:/?success";
+        return "redirect:login/?success";
     }
 
 }
