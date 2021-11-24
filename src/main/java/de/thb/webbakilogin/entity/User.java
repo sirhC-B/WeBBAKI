@@ -1,9 +1,8 @@
-package de.thb.webbakilogin.model;
+package de.thb.webbakilogin.entity;
 
 import lombok.*;
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.List;
 
 @Entity
 @Table(name = "users")

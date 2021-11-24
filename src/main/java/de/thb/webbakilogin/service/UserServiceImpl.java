@@ -1,7 +1,7 @@
 package de.thb.webbakilogin.service;
 
-import de.thb.webbakilogin.model.Role;
-import de.thb.webbakilogin.model.User;
+import de.thb.webbakilogin.entity.Role;
+import de.thb.webbakilogin.entity.User;
 import de.thb.webbakilogin.repository.UserRepository;
 import de.thb.webbakilogin.controller.dao.UserLoginDao;
 import de.thb.webbakilogin.controller.dao.UserRegistrationDao;

@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.model;
+package de.thb.webbakilogin.entity;
 
 import lombok.*;
 
