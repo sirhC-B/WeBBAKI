@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.web;
+package de.thb.webbakilogin.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,3 +13,8 @@ public class startPageController {
         return "startpage";
     }
 }
+
+/**
+ * Muss heute noch gebaut werden
+ * Ist die Seite nach Login wo Schalenmodell und Bedrohungsmatrix implementiert sind
+ */
