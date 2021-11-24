@@ -7,6 +7,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Getter
 public class User {
 
     //Id Erstellung
@@ -21,7 +22,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-
+    private boolean isEnabled;
     /*
     //Erstellung der Tabellen in DB
     @ManyToMany (fetch = FetchType.EAGER, cascade = CascadeType.ALL)
