@@ -44,7 +44,7 @@ public class MainPageController{
 
     @GetMapping
     public String showIndex(){
-        return "index";
+        return "login";
     }
 
     @GetMapping("/login")
