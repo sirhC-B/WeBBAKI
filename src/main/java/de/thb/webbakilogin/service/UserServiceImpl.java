@@ -1,10 +1,11 @@
 package de.thb.webbakilogin.service;
 
-import de.thb.webbakilogin.model.Role;
-import de.thb.webbakilogin.model.User;
-import de.thb.webbakilogin.model.repository.UserRepository;
-import de.thb.webbakilogin.web.dao.UserLoginDao;
-import de.thb.webbakilogin.web.dao.UserRegistrationDao;
+import de.thb.webbakilogin.controller.dao.UserLoginDao;
+import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
+import de.thb.webbakilogin.entity.Role;
+import de.thb.webbakilogin.entity.User;
+import de.thb.webbakilogin.model.Privilege;
+import de.thb.webbakilogin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -33,7 +34,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public User save(UserRegistrationDao registrationDao) {
         User user = new User(registrationDao.getEmail(),registrationDao.getFirstName(),registrationDao.getLastName(),
-                passwordEncoder.encode(registrationDao.getPassword()    ), Arrays.asList(new Role("ROLE_USER")));
+                passwordEncoder.encode(registrationDao.getPassword() ), registrationDao.getRole());
 
         return userRepository.save(user);
     }
@@ -51,12 +52,13 @@ public class UserServiceImpl implements UserService{
            throw new UsernameNotFoundException("Falsche Email oder Passwort.");
 
        }
-       return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), mapRolesToAuthoroties(user.getRoles()));
+       //mapRolesToAuthoroties(user.getRole())
+       return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), mapRolesToAuthoroties(user.getRole().getPrivileges()));
     }
 
-    private Collection<? extends GrantedAuthority> mapRolesToAuthoroties(Collection<Role> roles){
+    private Collection<? extends GrantedAuthority> mapRolesToAuthoroties(Collection<Privilege> privileges){
 
-        return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
+        return privileges.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
 
     }
 }

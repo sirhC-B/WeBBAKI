@@ -1,8 +1,10 @@
 package de.thb.webbakilogin.entity;
 
+import de.thb.webbakilogin.model.Privilege;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @NoArgsConstructor
@@ -38,5 +40,5 @@ public class Role {
                     name = "role_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "privilege_id", referencedColumnName = "id"))
-    private List<Privilege> privileges;
+    private Collection<Privilege> privileges;
 }

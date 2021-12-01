@@ -1,8 +1,10 @@
 package de.thb.webbakilogin.model;
 
+import de.thb.webbakilogin.entity.Role;
 import lombok.Getter;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -16,7 +18,7 @@ public class Privilege {
     private String name;
 
     @ManyToMany(mappedBy = "privileges")
-    private List<Role> roles;
+    private Collection<Role> roles;
 
     public Privilege(String name) {
         this.name = name;

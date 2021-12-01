@@ -1,6 +1,6 @@
 package de.thb.webbakilogin.controller.dao;
 
-import de.thb.webbakilogin.model.Role;
+import de.thb.webbakilogin.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

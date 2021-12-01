@@ -1,6 +1,6 @@
 package de.thb.webbakilogin.model.repository;
 
-import de.thb.webbakilogin.model.Role;
+import de.thb.webbakilogin.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

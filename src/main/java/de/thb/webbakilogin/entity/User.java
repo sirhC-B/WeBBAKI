@@ -28,9 +28,12 @@ public class User {
     @Column(nullable = false, length = 64)
     private String password;
 
+    private boolean enabled;
+
+    /*
     /**
      * @JoinTable benötigt für private Collection roles
-     */
+     /
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name="user_roles",
@@ -39,8 +42,10 @@ public class User {
             inverseJoinColumns = @JoinColumn(
                     name = "role_id",referencedColumnName = "id")
     )
-
-    private Collection<Role> roles;
+    */
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
 
     /**
@@ -49,14 +54,14 @@ public class User {
      * @param firstName
      * @param lastName
      * @param password
-     * @param roles
+     * @param role
      */
-    public User(String email, String firstName, String lastName, String password, Collection<Role> roles){
+    public User(String email, String firstName, String lastName, String password, Role role){
         setEmail(email);
         setFirstName(firstName);
         setLastName(lastName);
         setPassword(password);
-        setRoles(roles);
+        setRole(role);
     }
 
 
