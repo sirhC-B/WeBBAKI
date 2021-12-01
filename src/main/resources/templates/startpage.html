@@ -111,11 +111,14 @@
                     <!--TODO Parameter übergeben -->
                     <!-- TODO Bedrohungslage ergibt sich aus beiden vorherigen Wahlen -->
                     <h4>Bedrohungslage-Außenwelt:</h4>
-                    <select class="form-select-stepper" aria-label="Default select example">
-                        <option selected>Bedrohungslage</option>
+                    <select class="form-select-stepper" th:field="${szenario}" aria-label="Default select example">
+                        <option value="0">Szenario</option>
+                        <option th:each="szenario : ${szenario}" th:value="${szenario}" th:text="${szenario}"></option>
                     </select>
 
+
                 </div>
+
 
             </div>
 
@@ -151,6 +154,8 @@
                 </div>
 
                 <p>bei der Bereitstellunge der Dienstleistung der kritischen Infrastruktur haben.</p>
+
+
 
                 <div class="select-container">
 
@@ -211,6 +216,7 @@
                     </select>
 
                 </div>
+
 
             </div>
 

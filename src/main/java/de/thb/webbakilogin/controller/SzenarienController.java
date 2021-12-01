@@ -1,35 +1,30 @@
 package de.thb.webbakilogin.controller;
 
+
+import de.thb.webbakilogin.controller.dao.UserLoginDao;
 import de.thb.webbakilogin.service.SzenarioServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
 
-@Controller
-@RequestMapping("/start")
-public class startPageController {
+
+@RestController
+public class SzenarienController {
 
     @Autowired
     public SzenarioServiceImpl szenarioService;
 
-    @GetMapping
-    public String showStartPage(){
-        return "startpage";
-    }
 
-    @ModelAttribute("szenario")
+    @GetMapping(path = "getdata")
     public List<String> getSZ(){
         return szenarioService.szenarioGetAllSzena();
     }
 
 }
-
-/**
- * Muss heute noch gebaut werden
- * Ist die Seite nach Login wo Schalenmodell und Bedrohungsmatrix implementiert sind
- */
