@@ -1,10 +1,10 @@
 package de.thb.webbakilogin.service;
 
-import de.thb.webbakilogin.entity.Role;
-import de.thb.webbakilogin.entity.User;
-import de.thb.webbakilogin.repository.UserRepository;
-import de.thb.webbakilogin.controller.dao.UserLoginDao;
-import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
+import de.thb.webbakilogin.model.Role;
+import de.thb.webbakilogin.model.User;
+import de.thb.webbakilogin.model.repository.UserRepository;
+import de.thb.webbakilogin.web.dao.UserLoginDao;
+import de.thb.webbakilogin.web.dao.UserRegistrationDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
