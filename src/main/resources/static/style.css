@@ -20,7 +20,6 @@ body {
     max-width: 100% !important;
     position: relative;
     border: 1px solid black;
-    padding: 0!important;
 }
 
 .row-btn {
@@ -33,7 +32,7 @@ body {
 }
 
 .background {
-    background-image: url("../images/netzwerke.jpg") !important;
+    background-image: url("images/netzwerke.jpg") !important;
     background-size: cover;
     height: 100% !important;
 }
@@ -616,6 +615,7 @@ body {
 .startpage-container{
    /* padding-top:20px; */
     border: 1px solid black;
+    padding: 0!important;
     width: 70%!important;
     height: 70%;
     position: absolute;

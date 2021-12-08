@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="de">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Startseite</title>
     <!-- BOTH CSS FILES FROM BOOTSTRAP -->
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{/stepform.css}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/stepform.css}">
-    <script src="../static/js/stepform.js"></script>
 
 </head>
 <body class="startpage">
@@ -72,7 +70,7 @@
 <div class="main">
     <div class="startpage-container container">
 
-        <form id="regForm" action="/action_page.php">
+        <form id="regForm" action="">
             <h1>Bedrohungsmatrix:</h1>
             <!-- One "tab" for each step in the form: -->
             <div class="tab">Szenarien mit indirekter Wirkung auf den Betreiber:
@@ -298,10 +296,9 @@
     </div>
 
 </div>
-</div>
 
 <!-- Stepform -->
-<script th:src="@{../js/stepform.js}"></script>
+<script th:src="@{/js/stepform.js}"></script>
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
