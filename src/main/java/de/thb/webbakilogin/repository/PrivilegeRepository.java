@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.model.repository;
+package de.thb.webbakilogin.repository;
 
 import de.thb.webbakilogin.model.Privilege;
 import org.springframework.data.jpa.repository.JpaRepository;

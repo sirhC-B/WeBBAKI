@@ -1,8 +1,8 @@
 package de.thb.webbakilogin.model;
 
 import de.thb.webbakilogin.entity.Role;
-import de.thb.webbakilogin.model.repository.PrivilegeRepository;
-import de.thb.webbakilogin.model.repository.RoleRepository;
+import de.thb.webbakilogin.repository.PrivilegeRepository;
+import de.thb.webbakilogin.repository.RoleRepository;
 import de.thb.webbakilogin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

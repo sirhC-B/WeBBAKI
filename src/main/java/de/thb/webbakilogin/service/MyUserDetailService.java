@@ -1,8 +1,9 @@
-package de.thb.webbakilogin.model;
+package de.thb.webbakilogin.service;
 
 import de.thb.webbakilogin.entity.Role;
 import de.thb.webbakilogin.entity.User;
-import de.thb.webbakilogin.model.repository.RoleRepository;
+import de.thb.webbakilogin.model.Privilege;
+import de.thb.webbakilogin.repository.RoleRepository;
 import de.thb.webbakilogin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
