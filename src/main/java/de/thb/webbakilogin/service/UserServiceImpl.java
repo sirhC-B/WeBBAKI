@@ -2,7 +2,6 @@ package de.thb.webbakilogin.service;
 
 import de.thb.webbakilogin.controller.dao.UserLoginDao;
 import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
-import de.thb.webbakilogin.entity.Role;
 import de.thb.webbakilogin.entity.User;
 import de.thb.webbakilogin.model.Privilege;
 import de.thb.webbakilogin.repository.UserRepository;
@@ -13,11 +12,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+@Transactional
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -53,10 +53,10 @@ public class UserServiceImpl implements UserService{
 
        }
        //mapRolesToAuthoroties(user.getRole())
-       return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), mapRolesToAuthoroties(user.getRole().getPrivileges()));
+       return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), mapRolesToAuthorities(user.getRole().getPrivileges()));
     }
 
-    private Collection<? extends GrantedAuthority> mapRolesToAuthoroties(Collection<Privilege> privileges){
+    private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Privilege> privileges){
 
         return privileges.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
 
