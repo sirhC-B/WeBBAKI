@@ -26,10 +26,42 @@ public class startPageController {
         return szenarioService.szenarioGetAllSzena();
     }
 
-    @ModelAttribute("mastertopic")
-    public List<String> getMaster(){
-        return szenarioService.szenarioGetAllMaster();
+
+    /**
+     * Incremented Master Topics
+     * @return
+     */
+
+    @ModelAttribute("mastertopic0")
+    public List<String> getMasterZero(){
+        return szenarioService.getAllMastertopicsOne();
     }
+
+    @ModelAttribute("mastertopic1")
+    public List<String> getMasterOne(){
+        return szenarioService.getAllMastertopicsTwo();
+    }
+
+    @ModelAttribute("mastertopic2")
+    public List<String> getMasterTwo(){
+        return szenarioService.getAllMastertopicsThree();
+    }
+
+    @ModelAttribute("mastertopic3")
+    public List<String> getMasterThree(){
+        return szenarioService.getAllMastertopicsFour();
+    }
+
+    @ModelAttribute("mastertopic4")
+    public List<String> getMasterFour(){
+        return szenarioService.getAllMastertopicsFive();
+    }
+
+    @ModelAttribute("mastertopic5")
+    public List<String> getMasterFive(){
+        return szenarioService.getAllMastertopicsSix();
+    }
+
 
 }
 

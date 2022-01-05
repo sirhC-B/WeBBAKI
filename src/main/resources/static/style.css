@@ -6,7 +6,7 @@
 */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
 }
 
 .container-fluid {
@@ -602,31 +602,26 @@ body {
 
 /* Startpage CSS */
 
-.startpage{
-    background-color: #ede4c8b8;
+.startpage {
+    background-color: #f4f4f4;
 }
 
-.main{
+.main {
     margin-left: 300px;
     font-size: 20px;
     padding: 0px 0px;
 }
 
-.startpage-container{
-   /* padding-top:20px; */
+.startpage-container {
+    /* padding-top:20px; */
     border: 1px solid black;
-    padding: 0!important;
-    width: 70%!important;
-    height: 70%;
-    position: absolute;
-    top: 10%;
-    left: 22.5%;
+    padding: 0 !important;
     box-shadow: 1px 1px #4f5b69;
     text-align: center;
     align-items: center;
 }
 
-.select-container{
+.select-container {
     width: 90%;
     position: relative;
     left: 5%;
@@ -640,11 +635,25 @@ body {
     padding: .375rem 2.25rem .375rem .75rem;
     margin: 10px;
     -moz-padding-start: calc(0.75rem - 3px);
-    font-size: 1rem;
+    font-family: sans-serif;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
 }
 
+/**
+tab-box CSS
+ */
 
+.tab-box {
+    width: 80%;
+    height: 60%;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    border: 1px solid lightblue;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    margin-top: 20px;
+}
