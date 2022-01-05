@@ -70,17 +70,19 @@
 <div class="main">
     <div class="startpage-container container">
 
-        <form id="regForm" action="">
-            <h1>Bedrohungsmatrix:</h1>
+        <form id="regForm">
+
             <!-- One "tab" for each step in the form: -->
-            <div class="tab">Szenarien mit indirekter Wirkung auf den Betreiber:
+            <div th:field="${mastertopic}" th:value="${mastertopic}" th:text="${mastertopic}"></div>
+            <div class="tab">
                 <div class="select-container">
                     <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
                         wahrscheinlich:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
+                        <!-- th:each="name : ${risks}"> -->
                         <option selected>Eintrittswahrscheinlichkeit</option>
-                        <option value="rare">Selten</option>
+                        <option value="rare">Selten <!-- th:field="${name}"> --> </option>
                         <option value="avg">Mittel</option>
                         <option value="often">Häufig</option>
                         <option value="veryOften">Sehr häufig</option>
@@ -154,7 +156,6 @@
                 </div>
 
                 <p>bei der Bereitstellunge der Dienstleistung der kritischen Infrastruktur haben.</p>
-
 
 
                 <div class="select-container">

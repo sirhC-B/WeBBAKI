@@ -9,5 +9,7 @@ import java.util.List;
 public interface SzenarioService  {
 
     List<String> szenarioGetAllSzena();
+    List<String> szenarioGetAllMaster();
+    List<String> szenarioGetAllSubs();
 
 }

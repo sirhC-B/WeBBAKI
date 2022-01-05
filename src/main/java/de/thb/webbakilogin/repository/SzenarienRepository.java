@@ -8,16 +8,20 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface SzenarienRepository extends JpaRepository<Szenarien,Integer> {
+public interface SzenarienRepository extends JpaRepository<Szenarien, Integer> {
 
 
-   @Override
-   List<Szenarien> findAll();
+    @Override
+    List<Szenarien> findAll();
 
-   @Query("SELECT name FROM szenarien")
-   List<String> getAllSzena();
+    @Query("SELECT name FROM szenarien")
+    List<String> getAllSzena();
 
+    @Query("SELECT name FROM szenarien WHERE mastertopic=true")
+    List<String> getAllMastertopics();
 
+    @Query("SELECT name from szenarien where mastertopic=false")
+    List<String> getAllSubtopics();
 
 
 }
