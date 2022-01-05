@@ -9,11 +9,13 @@ import java.util.Collection;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     //Id Erstellung
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private long id;
 
     @Column(nullable = false, unique = true, length = 50)
@@ -28,7 +30,8 @@ public class User {
     @Column(nullable = false, length = 64)
     private String password;
 
-    private boolean enabled;
+    @Column(columnDefinition = "boolean default true")
+    private boolean isEnabled = true;
 
     /*
     /**
@@ -55,13 +58,15 @@ public class User {
      * @param lastName
      * @param password
      * @param role
+     * @param isEnabled
      */
-    public User(String email, String firstName, String lastName, String password, Role role){
+    public User(String email, String firstName, String lastName, String password, Role role, boolean isEnabled){
         setEmail(email);
         setFirstName(firstName);
         setLastName(lastName);
         setPassword(password);
         setRole(role);
+        setEnabled(isEnabled);
     }
 
 

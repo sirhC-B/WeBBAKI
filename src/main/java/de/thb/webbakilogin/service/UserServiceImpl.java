@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public User save(UserRegistrationDao registrationDao) {
         User user = new User(registrationDao.getEmail(),registrationDao.getFirstName(),registrationDao.getLastName(),
-                passwordEncoder.encode(registrationDao.getPassword() ), registrationDao.getRole());
+                passwordEncoder.encode(registrationDao.getPassword() ), registrationDao.getRole(), registrationDao.isEnabled());
 
         return userRepository.save(user);
     }

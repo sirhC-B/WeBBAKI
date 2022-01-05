@@ -16,6 +16,7 @@ public class UserRegistrationDao {
     private String email;
     private String password;
     private String sector;
+    private boolean isEnabled;
 
     private Role role;
 
