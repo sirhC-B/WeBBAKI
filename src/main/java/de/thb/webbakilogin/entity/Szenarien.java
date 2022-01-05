@@ -22,6 +22,9 @@ public class Szenarien {
     @Column(nullable = false, unique = false)
     private boolean mastertopic;
 
+    @Column(nullable = false, unique = false)
+    private int tab_id;
+
 /***
  * Constructor of the Role Class
  * @param name the name of the role
