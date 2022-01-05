@@ -19,9 +19,5 @@ public class Szenarien {
     @Column(nullable = false, unique = true)
     private String name;
 
-/***
- * Constructor of the Role Class
- * @param name the name of the role
- */
 
 }
