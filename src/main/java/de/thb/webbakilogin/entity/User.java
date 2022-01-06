@@ -1,6 +1,8 @@
 package de.thb.webbakilogin.entity;
 
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -30,7 +32,7 @@ public class User {
     @Column(nullable = false, length = 64)
     private String password;
 
-    @Column(columnDefinition = "boolean default true")
+    @ColumnDefault("true")
     private boolean isEnabled = true;
 
     /*
