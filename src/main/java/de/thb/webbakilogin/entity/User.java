@@ -4,7 +4,6 @@ import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "users")
@@ -68,7 +67,7 @@ public class User {
         setLastName(lastName);
         setPassword(password);
         setRole(role);
-        setEnabled(isEnabled);
+        setEnabled(true);
     }
 
 

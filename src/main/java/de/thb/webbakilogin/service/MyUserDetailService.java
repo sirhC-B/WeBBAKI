@@ -1,5 +1,7 @@
 package de.thb.webbakilogin.service;
 
+import de.thb.webbakilogin.controller.dao.UserLoginDao;
+import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
 import de.thb.webbakilogin.entity.Role;
 import de.thb.webbakilogin.entity.User;
 import de.thb.webbakilogin.model.Privilege;
@@ -10,6 +12,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,13 +23,33 @@ import java.util.List;
 
 @Service("userDetailsService")
 @Transactional
-public class MyUserDetailService implements UserDetailsService {
+public class MyUserDetailService implements UserDetailsService, UserService {
 
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private RoleRepository roleRepository;
+
+    @Autowired
+    BCryptPasswordEncoder passwordEncoder;
+
+    @Override
+    public User save(UserRegistrationDao registrationDao) {
+        User user = new User(registrationDao.getEmail(),registrationDao.getFirstName(),registrationDao.getLastName(),
+                passwordEncoder.encode(registrationDao.getPassword() ), registrationDao.getRole(), registrationDao.isEnabled());
+
+
+        Role role = roleRepository.findByName("ROLE_ADMIN");
+        user.setRole(role);
+
+        return userRepository.save(user);
+    }
+
+    @Override
+    public User save(UserLoginDao userLoginDao) {
+        return null;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String email) {
@@ -40,6 +63,7 @@ public class MyUserDetailService implements UserDetailsService {
                     getAuthorities(roleRepository.findByName("ROLE_USER")));
         }
 
+        //TODO Null Pointer Exception bei noch nicht zugewiesener Rolle catchen
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail(), user.getPassword() , user.isEnabled(), true, true,
                 true, getAuthorities(user.getRole()));
