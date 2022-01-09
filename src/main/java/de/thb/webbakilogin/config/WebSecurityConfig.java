@@ -43,16 +43,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(authenticationProvider());
     }
 
+    /**
+     * Kleine Sammlung an vorherigen Zeilen, just in Case
+    // .antMatchers("/**").permitAll()
+    // .anyRequest().authenticated()
+
+     // .defaultSuccessUrl("/start")
+    // .permitAll()
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/**").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/login", "/register", "/").permitAll()
+                .antMatchers("/start").hasAnyAuthority("ROLE_ADMIN", "ROLE_USER")
                 .and()
                 .formLogin()
                 .loginPage("/login")
                 .defaultSuccessUrl("/start")
-                .permitAll()
+                //.permitAll()
                 .and()
                 .logout()
                 .invalidateHttpSession(true)

@@ -1,19 +1,22 @@
 package de.thb.webbakilogin.entity;
 
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "users")
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     //Id Erstellung
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private long id;
 
     @Column(nullable = false, unique = true, length = 50)
@@ -28,9 +31,13 @@ public class User {
     @Column(nullable = false, length = 64)
     private String password;
 
+    @ColumnDefault("true")
+    private boolean isEnabled = true;
+
+    /*
     /**
      * @JoinTable benötigt für private Collection roles
-     */
+     /
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name="user_roles",
@@ -39,8 +46,10 @@ public class User {
             inverseJoinColumns = @JoinColumn(
                     name = "role_id",referencedColumnName = "id")
     )
-
-    private Collection<Role> roles;
+    */
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
 
     /**
@@ -49,14 +58,16 @@ public class User {
      * @param firstName
      * @param lastName
      * @param password
-     * @param roles
+     * @param role
+     * @param isEnabled
      */
-    public User(String email, String firstName, String lastName, String password, Collection<Role> roles){
+    public User(String email, String firstName, String lastName, String password, Role role, boolean isEnabled){
         setEmail(email);
         setFirstName(firstName);
         setLastName(lastName);
         setPassword(password);
-        setRoles(roles);
+        setRole(role);
+        setEnabled(true);
     }
 
 
