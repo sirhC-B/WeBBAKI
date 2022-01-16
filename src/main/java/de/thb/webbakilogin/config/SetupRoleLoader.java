@@ -1,6 +1,7 @@
-package de.thb.webbakilogin.model;
+package de.thb.webbakilogin.config;
 
 import de.thb.webbakilogin.entity.Role;
+import de.thb.webbakilogin.entity.Privilege;
 import de.thb.webbakilogin.repository.PrivilegeRepository;
 import de.thb.webbakilogin.repository.RoleRepository;
 import de.thb.webbakilogin.repository.UserRepository;

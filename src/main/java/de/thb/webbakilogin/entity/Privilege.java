@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.model;
+package de.thb.webbakilogin.entity;
 
 import de.thb.webbakilogin.entity.Role;
 import lombok.Getter;

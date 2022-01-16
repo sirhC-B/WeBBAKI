@@ -1,6 +1,5 @@
 package de.thb.webbakilogin.entity;
 
-import de.thb.webbakilogin.model.Privilege;
 import lombok.*;
 
 import javax.persistence.*;

@@ -4,7 +4,7 @@ import de.thb.webbakilogin.controller.dao.UserLoginDao;
 import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
 import de.thb.webbakilogin.entity.Role;
 import de.thb.webbakilogin.entity.User;
-import de.thb.webbakilogin.model.Privilege;
+import de.thb.webbakilogin.entity.Privilege;
 import de.thb.webbakilogin.repository.RoleRepository;
 import de.thb.webbakilogin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

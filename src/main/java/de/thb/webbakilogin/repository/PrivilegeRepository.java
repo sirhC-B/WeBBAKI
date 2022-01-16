@@ -1,10 +1,8 @@
 package de.thb.webbakilogin.repository;
 
-import de.thb.webbakilogin.model.Privilege;
+import de.thb.webbakilogin.entity.Privilege;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface PrivilegeRepository extends JpaRepository<Privilege, Long>{
