@@ -21,11 +21,6 @@ public class MainPageController{
      */
 
 
-    /**
-     * TODO
-     * @Chris Bösner /login korrigieren als Index
-     */
-
 
     @ModelAttribute("logUser")
     public UserLoginDao userLoginDto(Model model){

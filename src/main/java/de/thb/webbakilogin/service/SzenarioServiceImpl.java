@@ -19,6 +19,46 @@ public class SzenarioServiceImpl implements SzenarioService {
         return szenarienRepository.getAllSzena();
     }
 
+    @Override
+    public List<String> szenarioGetAllMaster(){
+
+        return szenarienRepository.getAllMaster();
+    }
+
+    /**
+     * Six methods @Override from SzenarioService
+     * @return
+     */
+
+    public List<String> getAllMastertopicsOne(){
+        return szenarienRepository.getAllMastertopicsOne();
+    }
+
+    public List<String> getAllMastertopicsTwo(){
+        return szenarienRepository.getAllMastertopicsTwo();
+    }
+
+    public List<String> getAllMastertopicsThree(){
+        return szenarienRepository.getAllMastertopicsThree();
+    }
+
+    public List<String> getAllMastertopicsFour(){
+        return szenarienRepository.getAllMastertopicsFour();
+    }
+
+    public List<String> getAllMastertopicsFive(){
+        return szenarienRepository.getAllMastertopicsFive();
+    }
+
+    public List<String> getAllMastertopicsSix(){
+        return szenarienRepository.getAllMastertopicsSix();
+    }
+
+
+    @Override
+    public List<String> szenarioGetAllSubs(){
+        return szenarienRepository.getAllSubtopics();
+    }
 
 
 }
