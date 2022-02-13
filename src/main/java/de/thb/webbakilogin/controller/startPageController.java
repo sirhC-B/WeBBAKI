@@ -1,6 +1,6 @@
 package de.thb.webbakilogin.controller;
 
-import de.thb.webbakilogin.service.SzenarioServiceImpl;
+import de.thb.webbakilogin.service.ScenarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import java.util.List;
 public class startPageController {
 
     @Autowired
-    public SzenarioServiceImpl szenarioService;
+    public ScenarioService szenarioService;
 
     @GetMapping
     public String showStartPage(){
@@ -23,7 +23,7 @@ public class startPageController {
 
     @ModelAttribute("szenario")
     public List<String> getSZ(){
-        return szenarioService.szenarioGetAllSzena();
+        return szenarioService.getAllScenarios();
     }
 
 

@@ -6,11 +6,11 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Table(name = "szenarien")
-@Entity(name = "szenarien" )
+@Table(name = "scenario")
+@Entity(name = "scenario" )
 @NoArgsConstructor
 @AllArgsConstructor
-public class Szenarien {
+public class Scenario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,14 +20,9 @@ public class Szenarien {
     private String name;
 
     @Column(nullable = false, unique = false)
-    private boolean mastertopic;
+    private boolean masterTopic;
 
     @Column(nullable = false, unique = false)
     private int tab_id;
-
-/***
- * Constructor of the Role Class
- * @param name the name of the role
- */
 
 }
