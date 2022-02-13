@@ -23,7 +23,7 @@ import java.util.List;
 
 @Service("userDetailsService")
 @Transactional
-public class MyUserDetailService implements UserDetailsService, UserService {
+public class MyUserDetailService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
@@ -34,11 +34,9 @@ public class MyUserDetailService implements UserDetailsService, UserService {
     @Autowired
     BCryptPasswordEncoder passwordEncoder;
 
-    @Override
-    public User save(UserRegistrationDao registrationDao) {
+    public User registerNewUser(UserRegistrationDao registrationDao) {
         User user = new User(registrationDao.getEmail(),registrationDao.getFirstName(),registrationDao.getLastName(),
                 passwordEncoder.encode(registrationDao.getPassword() ), registrationDao.getRole(), registrationDao.isEnabled());
-
 
         Role role = roleRepository.findByName("ROLE_ADMIN");
         user.setRole(role);
@@ -46,8 +44,7 @@ public class MyUserDetailService implements UserDetailsService, UserService {
         return userRepository.save(user);
     }
 
-    @Override
-    public User save(UserLoginDao userLoginDao) {
+    public User registerNewUser(UserLoginDao userLoginDao) {
         return null;
     }
 

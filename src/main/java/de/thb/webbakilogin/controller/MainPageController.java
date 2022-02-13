@@ -1,6 +1,6 @@
 package de.thb.webbakilogin.controller;
 
-import de.thb.webbakilogin.service.UserService;
+import de.thb.webbakilogin.service.MyUserDetailService;
 import de.thb.webbakilogin.controller.dao.UserLoginDao;
 import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.ui.Model;
 public class MainPageController{
 
     @Autowired
-    private UserService userService;
+    private MyUserDetailService userService;
     /*
     Giving the Login Parameters for the Login Form in index.html
      */
@@ -50,7 +50,7 @@ public class MainPageController{
 
     @RequestMapping("/register")
     public String registerUserAccount(@ModelAttribute("user") UserRegistrationDao registrationDao){
-        userService.save(registrationDao);
+        userService.registerNewUser(registrationDao);
         return "redirect:login/?success";
     }
 

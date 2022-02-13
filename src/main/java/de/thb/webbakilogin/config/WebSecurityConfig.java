@@ -1,6 +1,6 @@
 package de.thb.webbakilogin.config;
 
-import de.thb.webbakilogin.service.UserService;
+import de.thb.webbakilogin.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    UserService userService;
+    MyUserDetailService userService;
 
 
     @Bean
