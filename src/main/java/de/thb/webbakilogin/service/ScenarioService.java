@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ScenarioService /*implements SzenarioService*/ {
+public class ScenarioService  {
 
     @Autowired
     private ScenarioRepository scenarioRepository;
@@ -26,27 +26,27 @@ public class ScenarioService /*implements SzenarioService*/ {
      * @return
      */
 
-    public List<String> getAllMastertopicsOne(){
+    public List<String> getAllMasterTopicsOne(){
         return scenarioRepository.getAllMastertopicsOne();
     }
 
-    public List<String> getAllMastertopicsTwo(){
+    public List<String> getAllMasterTopicsTwo(){
         return scenarioRepository.getAllMastertopicsTwo();
     }
 
-    public List<String> getAllMastertopicsThree(){
+    public List<String> getAllMasterTopicsThree(){
         return scenarioRepository.getAllMastertopicsThree();
     }
 
-    public List<String> getAllMastertopicsFour(){
+    public List<String> getAllMasterTopicsFour(){
         return scenarioRepository.getAllMastertopicsFour();
     }
 
-    public List<String> getAllMastertopicsFive(){
+    public List<String> getAllMasterTopicsFive(){
         return scenarioRepository.getAllMastertopicsFive();
     }
 
-    public List<String> getAllMastertopicsSix(){
+    public List<String> getAllMasterTopicsSix(){
         return scenarioRepository.getAllMastertopicsSix();
     }
 

@@ -14,16 +14,16 @@ import java.util.List;
 public class startPageController {
 
     @Autowired
-    public ScenarioService szenarioService;
+    public ScenarioService scenarioService;
 
     @GetMapping
     public String showStartPage(){
         return "startpage";
     }
 
-    @ModelAttribute("szenario")
+    @ModelAttribute("scenario")
     public List<String> getSZ(){
-        return szenarioService.getAllScenarios();
+        return scenarioService.getAllScenarios();
     }
 
 
@@ -32,34 +32,34 @@ public class startPageController {
      * @return
      */
 
-    @ModelAttribute("mastertopic0")
+    @ModelAttribute("masterTopic0")
     public List<String> getMasterZero(){
-        return szenarioService.getAllMastertopicsOne();
+        return scenarioService.getAllMasterTopicsOne();
     }
 
-    @ModelAttribute("mastertopic1")
+    @ModelAttribute("masterTopic1")
     public List<String> getMasterOne(){
-        return szenarioService.getAllMastertopicsTwo();
+        return scenarioService.getAllMasterTopicsTwo();
     }
 
-    @ModelAttribute("mastertopic2")
+    @ModelAttribute("masterTopic2")
     public List<String> getMasterTwo(){
-        return szenarioService.getAllMastertopicsThree();
+        return scenarioService.getAllMasterTopicsThree();
     }
 
-    @ModelAttribute("mastertopic3")
+    @ModelAttribute("masterTopic3")
     public List<String> getMasterThree(){
-        return szenarioService.getAllMastertopicsFour();
+        return scenarioService.getAllMasterTopicsFour();
     }
 
-    @ModelAttribute("mastertopic4")
+    @ModelAttribute("masterTopic4")
     public List<String> getMasterFour(){
-        return szenarioService.getAllMastertopicsFive();
+        return scenarioService.getAllMasterTopicsFive();
     }
 
-    @ModelAttribute("mastertopic5")
+    @ModelAttribute("masterTopic5")
     public List<String> getMasterFive(){
-        return szenarioService.getAllMastertopicsSix();
+        return scenarioService.getAllMasterTopicsSix();
     }
 
 
