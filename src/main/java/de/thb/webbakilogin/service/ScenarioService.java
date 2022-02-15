@@ -27,27 +27,27 @@ public class ScenarioService  {
      */
 
     public List<String> getAllMasterTopicsOne(){
-        return scenarioRepository.getAllMastertopicsOne();
+        return scenarioRepository.getAllMasterTopicsOne();
     }
 
     public List<String> getAllMasterTopicsTwo(){
-        return scenarioRepository.getAllMastertopicsTwo();
+        return scenarioRepository.getAllMasterTopicsTwo();
     }
 
     public List<String> getAllMasterTopicsThree(){
-        return scenarioRepository.getAllMastertopicsThree();
+        return scenarioRepository.getAllMasterTopicsThree();
     }
 
     public List<String> getAllMasterTopicsFour(){
-        return scenarioRepository.getAllMastertopicsFour();
+        return scenarioRepository.getAllMasterTopicsFour();
     }
 
     public List<String> getAllMasterTopicsFive(){
-        return scenarioRepository.getAllMastertopicsFive();
+        return scenarioRepository.getAllMasterTopicsFive();
     }
 
     public List<String> getAllMasterTopicsSix(){
-        return scenarioRepository.getAllMastertopicsSix();
+        return scenarioRepository.getAllMasterTopicsSix();
     }
 
 

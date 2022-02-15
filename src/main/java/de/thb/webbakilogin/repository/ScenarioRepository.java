@@ -26,22 +26,22 @@ public interface ScenarioRepository extends JpaRepository<Scenario, Integer> {
      */
 
     @Query("SELECT name FROM scenario WHERE masterTopic=true AND tab_id=1")
-    List<String> getAllMastertopicsOne();
+    List<String> getAllMasterTopicsOne();
 
     @Query("SELECT name FROM scenario WHERE masterTopic=true AND tab_id=2")
-    List<String> getAllMastertopicsTwo();
+    List<String> getAllMasterTopicsTwo();
 
     @Query("SELECT name FROM scenario WHERE masterTopic=true AND tab_id=3")
-    List<String> getAllMastertopicsThree();
+    List<String> getAllMasterTopicsThree();
 
     @Query("SELECT name FROM scenario WHERE masterTopic=true AND tab_id=4")
-    List<String> getAllMastertopicsFour();
+    List<String> getAllMasterTopicsFour();
 
     @Query("SELECT name FROM scenario WHERE masterTopic=true AND tab_id=5")
-    List<String> getAllMastertopicsFive();
+    List<String> getAllMasterTopicsFive();
 
     @Query("SELECT name FROM scenario WHERE masterTopic=true AND tab_id=6")
-    List<String> getAllMastertopicsSix();
+    List<String> getAllMasterTopicsSix();
 
     @Query("SELECT name from scenario where masterTopic=false")
     List<String> getAllSubtopics();

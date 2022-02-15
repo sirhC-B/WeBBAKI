@@ -1,8 +1,8 @@
 package de.thb.webbakilogin.controller;
 
-import de.thb.webbakilogin.service.MyUserDetailService;
 import de.thb.webbakilogin.controller.dao.UserLoginDao;
 import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
+import de.thb.webbakilogin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +15,10 @@ import org.springframework.ui.Model;
 public class MainPageController{
 
     @Autowired
-    private MyUserDetailService userService;
+    private UserService userService;
     /*
     Giving the Login Parameters for the Login Form in index.html
      */
-
 
 
     @ModelAttribute("logUser")

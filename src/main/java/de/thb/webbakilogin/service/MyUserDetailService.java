@@ -1,7 +1,5 @@
 package de.thb.webbakilogin.service;
 
-import de.thb.webbakilogin.controller.dao.UserLoginDao;
-import de.thb.webbakilogin.controller.dao.UserRegistrationDao;
 import de.thb.webbakilogin.entity.Role;
 import de.thb.webbakilogin.entity.User;
 import de.thb.webbakilogin.entity.Privilege;
@@ -12,7 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,23 +27,6 @@ public class MyUserDetailService implements UserDetailsService {
 
     @Autowired
     private RoleRepository roleRepository;
-
-    @Autowired
-    BCryptPasswordEncoder passwordEncoder;
-
-    public User registerNewUser(UserRegistrationDao registrationDao) {
-        User user = new User(registrationDao.getEmail(),registrationDao.getFirstName(),registrationDao.getLastName(),
-                passwordEncoder.encode(registrationDao.getPassword() ), registrationDao.getRole(), registrationDao.isEnabled());
-
-        Role role = roleRepository.findByName("ROLE_ADMIN");
-        user.setRole(role);
-
-        return userRepository.save(user);
-    }
-
-    public User registerNewUser(UserLoginDao userLoginDao) {
-        return null;
-    }
 
     @Override
     public UserDetails loadUserByUsername(String email) {
