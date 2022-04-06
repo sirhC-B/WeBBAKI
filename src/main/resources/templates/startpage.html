@@ -55,7 +55,7 @@
             <div class="tab">
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic0}" th:value="${masterTopic0}" th:text="${masterTopic0}"></h2>
+                    <h2>Szenarien mit indirekter Wirkung auf den Betreiber (Höhere Gewalt)</h2>
                     <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
                         wahrscheinlich:</p>
                     <!--TODO Parameter übergeben -->
@@ -98,9 +98,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                 ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic0}" th:value="${masterTopic0}" th:text="${masterTopic0}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit indirekter Wirkung auf den Betreiber
+                        (Höhere Gewalt)
+                    </h2>
+                    <p>Die Verschärfung der KRITIS-Auflagen tritt: </p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -111,7 +112,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>ein und würden bei Eintritt: </p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -142,9 +143,11 @@
                     ------------------------------------------------------------------------------------------------------>
 
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic0}" th:value="${masterTopic0}" th:text="${masterTopic0}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit indirekter Wirkung auf den Betreiber
+                        (Höhere Gewalt)
+                    </h2>
+                    <p>Politische Entscheidungen zur Energiewende treten:
+                    </p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -155,7 +158,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt:</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -189,9 +192,9 @@
             <div class="tab">
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)</h2>
+                    <p>Die Blockade von (Vor)-Dienstleistern (Embargo) treten: </p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -202,7 +205,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>und würden bei Eintritt: </p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -232,9 +235,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                 ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)
+                    </h2>
+                    <p>Ein Attentat auf Mitglieder der Geschäftsführung durch Extremisten tritt: </p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -245,7 +249,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt: </p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -276,9 +280,54 @@
                     ------------------------------------------------------------------------------------------------------>
 
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)
+                    </h2>
+                    <p>Der Ausfall von globalen Lieferketten tritt:</p>
+                    <!--TODO Parameter übergeben -->
+                    <select class="form-select-stepper" aria-label="Default select example">
+                        <option selected>Eintrittswahrscheinlichkeit</option>
+                        <option value="rare">Selten</option>
+                        <option value="avg">Mittel</option>
+                        <option value="often">Häufig</option>
+                        <option value="veryOften">Sehr häufig</option>
+                    </select>
+
+
+                    <p>auf und würde bei Eintritt: </p>
+
+
+                    <!--TODO Parameter übergeben -->
+                    <select class="form-select-stepper" aria-label="Default select example">
+                        <option selected>Auswirkung</option>
+                        <option value="rare">Keine Auswirkungen</option>
+                        <option value="avg">Geringe Auswirkungen</option>
+                        <option value="often">Hohe Auswirkungen</option>
+                        <option value="veryOften">Existenzielle Auswirkungen</option>
+                    </select>
+
+
+                    <p>bei der Bereitstellung der Dienstleistung der kritischen Infrastruktur haben.</p>
+
+
+                    <br>
+                    <!--TODO Parameter übergeben -->
+                    <!-- TODO Bedrohungslage ergibt sich aus beiden vorherigen Wahlen -->
+                    <h4>Bedrohungslage-Außenwelt:</h4>
+                    <select class="form-select-stepper" th:field="${scenario}" aria-label="Default select example">
+                        <option value="0">Szenario</option>
+                        <option th:each="szenario : ${scenario}" th:value="${scenario}"
+                                th:text="${scenario}"></option>
+                    </select>
+                </div>
+
+                <!-- ---------------------------------------------------------------------------------------------------
+                    ------------------------------------------------------------------------------------------------------->
+                <div class="tab-box">
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)
+                    </h2>
+                    <p>Der Mangel an Fachkräften für den operativen Betrieb der kritischen Infrastruktur: </p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -319,9 +368,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)
+                    </h2>
+                    <p>Der Ausfall von Outsourcingpartnern tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -332,7 +382,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -362,9 +412,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)
+                    </h2>
+                    <p>Ein fehlender Support/Service des Herstellers tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -375,7 +426,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würde bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -405,9 +456,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf/durch Subjekte
+                        (Personal, Lieferanten, Dritte)
+                    </h2>
+                    <p>Eine mangelnde Umsetzung der Sicherheitsvorgaben beim Lieferanten oder Dienstleister tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -418,50 +470,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
-
-
-                    <!--TODO Parameter übergeben -->
-                    <select class="form-select-stepper" aria-label="Default select example">
-                        <option selected>Auswirkung</option>
-                        <option value="rare">Keine Auswirkungen</option>
-                        <option value="avg">Geringe Auswirkungen</option>
-                        <option value="often">Hohe Auswirkungen</option>
-                        <option value="veryOften">Existenzielle Auswirkungen</option>
-                    </select>
-
-
-                    <p>bei der Bereitstellung der Dienstleistung der kritischen Infrastruktur haben.</p>
-
-
-                    <br>
-                    <!--TODO Parameter übergeben -->
-                    <!-- TODO Bedrohungslage ergibt sich aus beiden vorherigen Wahlen -->
-                    <h4>Bedrohungslage-Außenwelt:</h4>
-                    <select class="form-select-stepper" th:field="${scenario}" aria-label="Default select example">
-                        <option value="0">Szenario</option>
-                        <option th:each="szenario : ${scenario}" th:value="${scenario}"
-                                th:text="${scenario}"></option>
-                    </select>
-                </div>
-
-                <!-- ---------------------------------------------------------------------------------------------------
-                    ------------------------------------------------------------------------------------------------------->
-                <div class="tab-box">
-                    <h2 th:field="${masterTopic1}" th:value="${masterTopic1}" th:text="${masterTopic1}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
-                    <!--TODO Parameter übergeben -->
-                    <select class="form-select-stepper" aria-label="Default select example">
-                        <option selected>Eintrittswahrscheinlichkeit</option>
-                        <option value="rare">Selten</option>
-                        <option value="avg">Mittel</option>
-                        <option value="often">Häufig</option>
-                        <option value="veryOften">Sehr häufig</option>
-                    </select>
-
-
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -494,9 +503,9 @@
             <div class="tab">
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic2}" th:value="${masterTopic2}" th:text="${masterTopic2}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf die Perimetergrenze (Gebäude/Räume/Infrastruktur)
+                    </h2>
+                    <p>Terroristische Anschläge (Bio-/Chemie-Waffe, Sprengstoff) auf einige oder mehrere Gebäude der kritischen Infrastruktur treten:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -507,7 +516,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -537,9 +546,9 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                 ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic2}" th:value="${masterTopic2}" th:text="${masterTopic2}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf die Perimetergrenze (Gebäude/Räume/Infrastruktur)
+                    </h2>
+                    <p>Der Ausfall von Gebäudeteilen infolge von erhöhtem Infektionsgeschehen tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -550,7 +559,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -581,9 +590,9 @@
                     ------------------------------------------------------------------------------------------------------>
 
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic2}" th:value="${masterTopic2}" th:text="${masterTopic2}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf die Perimetergrenze (Gebäude/Räume/Infrastruktur)
+                    </h2>
+                    <p>Die Besetzung von Gebäuden/Gebäudeteilen der kritischen Infrastruktur durch Aktivististen (Behinderung des Zutritts für Mitarbeiter):</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -594,7 +603,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -629,9 +638,9 @@
             <div class="tab">
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic3}" th:value="${masterTopic3}" th:text="${masterTopic3}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf die eingesetzte Technik
+                        (Einwirkung auf IT/IC-Systeme)</h2>
+                    <p>Ein Ping-of-Death bei einem Hardwarelieferanten tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -642,7 +651,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würde bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -672,9 +681,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                 ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic3}" th:value="${masterTopic3}" th:text="${masterTopic3}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf die eingesetzte Technik
+                        (Einwirkung auf IT/IC-Systeme)
+                    </h2>
+                    <p>Der Ausfall von ICS-Elementen infolge eines Fertigungsfehlers tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -685,7 +695,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -716,9 +726,10 @@
                     ------------------------------------------------------------------------------------------------------>
 
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic3}" th:value="${masterTopic3}" th:text="${masterTopic3}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf die eingesetzte Technik
+                        (Einwirkung auf IT/IC-Systeme)
+                    </h2>
+                    <p>Die Sabotage/vorsätzliche Manipulation durch Innentäter an Teilen der kritischen Infrastruktur tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -729,7 +740,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würde bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -759,9 +770,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic3}" th:value="${masterTopic3}" th:text="${masterTopic3}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>"Szenarien mit direkter Einwirkung auf die eingesetzte Technik
+                        (Einwirkung auf IT/IC-Systeme)"
+                    </h2>
+                    <p>Der Diebstahl von Betriebsmitteln tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -772,7 +784,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -805,9 +817,9 @@
             <div class="tab">
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic4}" th:value="${masterTopic4}" th:text="${masterTopic4}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)</h2>
+                    <p>Ungerichtete Phishingangriffe treten:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -818,7 +830,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -848,9 +860,10 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                 ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic4}" th:value="${masterTopic4}" th:text="${masterTopic4}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)
+                    </h2>
+                    <p>DoS (DDoS)-Angriffe auf Teile der kritischen Infrastruktur treten:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -861,7 +874,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -892,9 +905,9 @@
                     ------------------------------------------------------------------------------------------------------>
 
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic4}" th:value="${masterTopic4}" th:text="${masterTopic4}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)</h2>
+                    <p>Das Ausnutzen von Zero-Day-Exploits bei eingesetzten IT-Systemen tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -905,7 +918,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -935,9 +948,9 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic4}" th:value="${masterTopic4}" th:text="${masterTopic4}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)</h2>
+                    <p>Durch Trojaner eingeschleuste Ransomeware tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -948,7 +961,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würde bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -978,9 +991,9 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic4}" th:value="${masterTopic4}" th:text="${masterTopic4}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)</h2>
+                    <p>Advanced Persistent Threat (APT) tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -991,7 +1004,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würde bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -1021,9 +1034,9 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                     ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic4}" th:value="${masterTopic4}" th:text="${masterTopic4}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)</h2>
+                    <p>Identitätsmissbrauch tritt:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -1034,7 +1047,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -1068,9 +1081,9 @@
             <div class="tab">
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic5}" th:value="${masterTopic5}" th:text="${masterTopic5}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                        (Accounts/Daten)</h2>
+                    <p>Gezielte, offensive Cyberwarattacken durch Hacktivisten treten:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -1081,7 +1094,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
@@ -1111,9 +1124,9 @@
                 <!-- ---------------------------------------------------------------------------------------------------
                 ------------------------------------------------------------------------------------------------------->
                 <div class="tab-box">
-                    <h2 th:field="${masterTopic5}" th:value="${masterTopic5}" th:text="${masterTopic5}"></h2>
-                    <p>Die Auswirkungen von Veränderungen der klimatischen Bedingungen treten aktuell
-                        wahrscheinlich:</p>
+                    <h2>Szenarien mit direkter Einwirkung auf logische Entitäten
+                                 (Accounts/Daten)</h2>
+                    <p>Gerichtete Phishing-Angriffe treten:</p>
                     <!--TODO Parameter übergeben -->
                     <select class="form-select-stepper" aria-label="Default select example">
                         <option selected>Eintrittswahrscheinlichkeit</option>
@@ -1124,7 +1137,7 @@
                     </select>
 
 
-                    <p>und würden bei Eintritt</p>
+                    <p>auf und würden bei Eintritt</p>
 
 
                     <!--TODO Parameter übergeben -->
