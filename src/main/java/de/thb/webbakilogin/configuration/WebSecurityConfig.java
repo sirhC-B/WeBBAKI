@@ -1,4 +1,4 @@
-package de.thb.webbakilogin.config;
+package de.thb.webbakilogin.configuration;
 
 import de.thb.webbakilogin.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
